@@ -1,8 +1,11 @@
 import './styles/global.scss';
+import './index.html';
 import 'bootstrap';
 
-import { runHeaderDropdown } from './scripts/header-dropdown';
+import { initHeaderDropdown } from './scripts/header-dropdown';
+import { initBanner } from './scripts/banner';
 
-document.addEventListener("DOMContentLoaded", function(){
-  runHeaderDropdown();
+document.addEventListener('DOMContentLoaded', function () {
+  initHeaderDropdown();
+  initBanner();
 });

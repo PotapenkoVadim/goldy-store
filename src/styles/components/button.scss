@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+.button { border: none; outline: none; font-weight: 500; font-size: 0.87rem; padding: 20px 55px;
+  &__primary { background-color: $main; color: $white;
+    &:hover { background-color: $dark; }
+    &:active { background-color: $black; }
+  }
+}

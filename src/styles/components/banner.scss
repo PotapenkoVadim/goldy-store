@@ -1,0 +1,35 @@
+@import '../variables.scss';
+
+.banner { margin-bottom: 120px;
+  &__slider { height: 550px;
+    &-button { position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; padding: 20px;
+      border-radius: 50%; border: 1px solid $main; cursor: pointer; z-index: 2; background-color: $light;
+
+      &.swiper-button-disabled { border-color: $gray;
+        &>.banner__slider-iconprev, &>.banner__slider-iconnext { background-color: $gray; }
+      }
+    }
+    &-prev { left: 25px;
+      &:hover { background-color: $background; }
+      &:active .banner__slider-iconprev { transform: translateX(-50%); }
+    }
+    &-next { right: 25px;
+      &:hover { background-color: $background; }
+      &:active .banner__slider-iconnext { transform: translateX(50%); }
+    }
+    &-iconprev, &-iconnext { transition: all 0.15s ease-in; }
+  }
+
+  &__slide { display: flex; align-items: center; background-color: $light;
+    &-info, &-poster { flex: 1; }
+    &-info { height: 100%; background-image: url(../static/images/union.png); background-size: contain; background-position: center;
+      background-repeat: no-repeat; display: flex; justify-content: center; flex-direction: column; padding-left: 125px;
+    }
+    &-image { object-fit: contain; }
+    &-title { font-size: 1.25rem; font-family: 'Prata', serif; margin-bottom: 30px; }
+    &-text { font-size: 3rem; font-family: 'Prata', serif; margin-bottom: 30px; }
+  }
+
+  & .swiper-pagination-bullet-active { background-color: $main !important; }
+  & .swiper-pagination-bullet { background-color: $white; border: 1px solid $main; }
+}
