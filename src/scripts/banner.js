@@ -1,12 +1,10 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation, Pagination]);
+import Swiper from 'swiper';
 
 const bannerSelectors = {
   slider: '#bannerSlider',
   prevButton: '#bannerSlider .banner__slider-prev',
   nextButton: '#bannerSlider .banner__slider-next',
-  pagination: '#bannerSlider .swiper-pagination'
+  pagination: '#bannerSlider .swiper-pagination',
 };
 
 export function initBanner() {

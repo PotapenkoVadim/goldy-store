@@ -1,6 +1,6 @@
 @import '../variables.scss';
 
-.banner { margin-bottom: 120px;
+.banner { margin-bottom: 115px;
   &__slider { height: 550px;
     &-button { position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; padding: 20px;
       border-radius: 50%; border: 1px solid $main; cursor: pointer; z-index: 2; background-color: $light;
