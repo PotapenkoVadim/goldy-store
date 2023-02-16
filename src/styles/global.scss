@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Prata&display=swap');
+
+@import '~bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; font-size: $font; }
