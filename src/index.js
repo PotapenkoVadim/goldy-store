@@ -1,3 +1,8 @@
 import './styles/global.scss';
+import 'bootstrap';
 
-console.log('Goldy Store Project!');
+import { runHeaderDropdown } from './scripts/header-dropdown';
+
+document.addEventListener("DOMContentLoaded", function(){
+  runHeaderDropdown();
+});

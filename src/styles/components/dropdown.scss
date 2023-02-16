@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.dropdown {
+  &__target { display: flex; align-items: center; gap: 8px; }
+  &__target-text { min-width: 125px; }
+  &__target.show>&__icon { transform: rotate(180deg); }
+  &-menu { box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); }
+  &-item { display: flex; align-items: center; gap: 8px; cursor: pointer;
+    &_active &__icon { display: block; }
+    &__icon { display: none; }
+  }
+}

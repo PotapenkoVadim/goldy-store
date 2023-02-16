@@ -1,0 +1,7 @@
+@import '../variables.scss';
+
+.navbar {
+  &__item { font-size: 0.8rem;
+    &_active { opacity: 0.5; }
+  }
+}

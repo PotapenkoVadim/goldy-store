@@ -7,6 +7,92 @@
   <title>Goldy Store</title>
 </head>
 <body>
-  <h1>Goldy Store</h1>
+  <main class="container">
+    <header class="header">
+      <div class="header__top">
+        <div class="header__meta">
+          <div id="headerDropdown" class="dropdown">
+            <div class="dropdown__target link link_small" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="icon icon__map"></span>
+              <span class="dropdown__target-text">Санкт-Петербург</span>
+              <span class="dropdown__icon icon icon__arrow-down"></span>
+            </div>
+  
+            <ul class="dropdown-menu">
+              <li data-value="0" class="dropdown-item dropdown-item_active">
+                <span>Санкт-Петербург</span>
+                <span class="icon icon__check dropdown-item__icon"></span>
+              </li>
+              <li data-value="1" class="dropdown-item">
+                <span>Москва</span>
+                <span class="icon icon__check dropdown-item__icon"></span>
+              </li>
+              <li data-value="2" class="dropdown-item">
+                <span>Нижний Новгород</span>
+                <span class="icon icon__check dropdown-item__icon"></span>
+              </li>
+              <li data-value="3" class="dropdown-item">
+                <span>Ростов-на-Дону</span>
+                <span class="icon icon__check dropdown-item__icon"></span>
+              </li>
+            </ul>
+          </div>
+  
+          <a class="phone link link_small" href="tel:88007852535">
+            <span class="icon icon__phone phone__icon"></span>
+            <span class="phone__number">8 800 785-25-35</span>
+          </a>
+        </div>
+
+        <div class="logo">
+          <img class="logo__image" src="./static/images/logo.png" alt="Logo" />
+          <span class="logo__description">ювелирный магазин</span>
+        </div>
+
+        <div class="header__actions">
+          <div class="header__login">
+            <span class="header__login-link">
+              <a href="#" class="link link_small">Вход</a>
+            </span>
+            <span class="header__login-link">
+              <a href="#" class="link link_small">Регистрация</a>
+            </span>
+          </div>
+
+          <div class="header__doing">
+            <button class="button-link">
+              <span class="icon icon__heart"></span>
+              <span data-value="23" class="button-link__marker"></span>
+            </button>
+            
+            <button class="button-link">
+              <span class="icon icon__chart"></span>
+            </button>
+
+            <button class="button-link">
+              <span class="icon icon__bag"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__down">
+        <nav class="header__navbar navbar">
+          <a class="navbar__item navbar__item_active link" href="#">Каталог</a>
+          <a class="navbar__item link" href="#">Акции</a>
+          <a class="navbar__item link" href="#">Бренды</a>
+          <a class="navbar__item link" href="#">Магазины</a>
+          <a class="navbar__item link" href="#">О нас</a>
+          <a class="navbar__item link" href="#">Доставка и оплата</a>
+          <a class="navbar__item link" href="#">Статьи</a>
+        </nav>
+
+        <div class="header__search search-field">
+          <input class="search-field__input" type="text" placeholder="Поиск по сайту" />
+          <span class="search-field__icon icon icon__search"></span>
+        </div>
+      </div>
+    </header>
+  </main>
 </body>
 </html>

@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.icon { display: block; width: 20px; height: 20px; mask-position: center; mask-repeat: no-repeat; mask-size: contain;
+  background-color: $main;
+
+  &__arrow-down { mask-image: url(../static/icons/arrow-down.svg); width: 6px; height: 6px; }
+  &__bag { mask-image: url(../static/icons/bag.svg); }
+  &__chart { mask-image: url(../static/icons/chart.svg); }
+  &__heart { mask-image: url(../static/icons/heart.svg); }
+  &__search { mask-image: url(../static/icons/search.svg); }
+  &__map { mask-image: url(../static/icons/map.svg); width: 16px; height: 16px; }
+  &__phone { mask-image: url(../static/icons/phone.svg); width: 16px; height: 16px; }
+  &__check { mask-image: url(../static/icons/check.svg); width: 16px; height: 16px; }
+}

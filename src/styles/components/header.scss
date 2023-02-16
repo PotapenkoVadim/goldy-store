@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.header { padding: 24px 0 20px;
+  &__top { display: flex; justify-content: space-between; margin-bottom: 20px; }
+  &__meta { display: flex; align-items: center; gap: 60px; }
+  &__actions { display: flex; align-items: center; gap: 60px; }
+  &__login { display: flex; align-items: center; gap: 20px;
+    &-link:first-child { position: relative; }
+    &-link:first-child::after { content: ''; position: absolute; top: 50%; right: -10px; width: 1px; height: 10px;
+      transform: translateY(-50%); background-color: $main;
+    }
+  }
+  &__doing { display: flex; align-items: center; gap: 15px; }
+
+  &__down { background-color: $light; display: flex; align-items: center; gap: 110px; }
+  &__navbar { flex: 4; padding: 20px 0 20px 50px; }
+  &__search { flex: 1; }
+}
