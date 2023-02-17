@@ -4,7 +4,7 @@ const productSliderSelectors = {
   slider: '#productOfDay',
   productSliders: '.product__poster[data-slider="product"]',
   prevButton: '.product__slider-button-prev',
-  nextButton: '.product__slider-button-next'
+  nextButton: '.product__slider-button-next',
 };
 
 export function initProductOfDaySlider() {
