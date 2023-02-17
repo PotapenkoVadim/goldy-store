@@ -4,7 +4,7 @@ const tabsSelectors = {
   content: '#sale .tabs__content',
   prev: '#sale .sale__slider-button-prev',
   next: '#sale .sale__slider-button-next',
-  disabled: 'swiper-button-disabled'
+  disabled: 'swiper-button-disabled',
 };
 
 const TYPES = ['rings', 'earrings', 'bracelets', 'watch'];
@@ -23,16 +23,25 @@ export function initSaleTabs() {
 
     for (let i = 0; i < tabsLength; i++) {
       tabContent[i].style.display = 'none';
-      tabLinks[i].className = tabLinks[i].className.replace(` ${tabsSelectors.linkActive}`, '');
-      
+      tabLinks[i].className = tabLinks[i].className.replace(
+        ` ${tabsSelectors.linkActive}`,
+        ''
+      );
+
       if (tabLinks[i].dataset.type === type) {
         tabContent[i].style.display = 'block';
         tabLinks[i].className += ` ${tabsSelectors.linkActive}`;
       }
     }
 
-    prevButton.className = prevButton.className.replace(` ${tabsSelectors.disabled}`, '');
-    nextButton.className = nextButton.className.replace(` ${tabsSelectors.disabled}`, '');
+    prevButton.className = prevButton.className.replace(
+      ` ${tabsSelectors.disabled}`,
+      ''
+    );
+    nextButton.className = nextButton.className.replace(
+      ` ${tabsSelectors.disabled}`,
+      ''
+    );
 
     if (type === 'rings') prevButton.className += ` ${tabsSelectors.disabled}`;
     if (type === 'watch') nextButton.className += ` ${tabsSelectors.disabled}`;
@@ -40,9 +49,11 @@ export function initSaleTabs() {
 
   openTabContent();
 
-  [...tabLinks].forEach(item => item.addEventListener('click', function() {
-    openTabContent(this.dataset.type);
-  }));
+  [...tabLinks].forEach((item) =>
+    item.addEventListener('click', function () {
+      openTabContent(this.dataset.type);
+    })
+  );
 
   prevButton.addEventListener('click', () => {
     if (index > 0) index -= 1;
@@ -51,7 +62,7 @@ export function initSaleTabs() {
   });
 
   nextButton.addEventListener('click', () => {
-    if (index < tabsLength -1) index += 1;
+    if (index < tabsLength - 1) index += 1;
 
     openTabContent(TYPES[index]);
   });

@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 
 const saleProductSliderSelectors = {
   slider: '.card__poster[data-slider="productSlider"]',
-  pagination: '.swiper-pagination'
+  pagination: '.swiper-pagination',
 };
 
 export function initSaleProductSlider() {

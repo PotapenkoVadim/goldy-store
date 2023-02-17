@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initHeaderDropdown();
   initBanner();
   initSaleTabs();
-  initSaleProductSlider()
+  initSaleProductSlider();
 });
