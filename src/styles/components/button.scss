@@ -5,4 +5,9 @@
     &:hover { background-color: $dark; }
     &:active { background-color: $black; }
   }
+
+  &__secondary { background-color: $white; color: $main; border: 1px solid $main;
+    &:hover { background-color: $main; color: $white; }
+    &:active { background-color: $black; color: $white; }
+  }
 }
