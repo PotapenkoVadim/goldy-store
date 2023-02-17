@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.sale { margin-bottom: 115px; position: relative;
+  &__title { margin-bottom: 24px; }
+  &__tabs { margin-bottom: 35px; }
+  &__category { min-height: 370px; }
+  &__slider-button { position: absolute; top: 100px !important; right: 0 !important; left: auto !important; transform: none;
+    &-prev { right: 65px !important; }
+  }
+
+  &__cards { display: flex; align-items: flex-start; gap: 20px; }
+}

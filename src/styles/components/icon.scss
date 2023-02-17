@@ -13,4 +13,8 @@
   &__check { mask-image: url(../static/icons/check.svg); width: 16px; height: 16px; }
   &__arrow-prev { mask-image: url(../static/icons/arrow-prev.svg); width: 16px; height: 16px; }
   &__arrow-next { mask-image: url(../static/icons/arrow-next.svg); width: 16px; height: 16px; }
+  &__heart-fill { mask-image: url(../static/icons/heart_fill.svg); width: 24px; height: 24px; }
+  &__eye { mask-image: url(../static/icons/eye.svg); width: 24px; height: 24px; }
+
+  &_gray { background-color: #C9C9C9; }
 }

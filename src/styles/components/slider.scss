@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+.slider {
+  &-button { position: absolute; top: 50%; transform: translateY(-50%); cursor: pointer; padding: 20px;
+    border-radius: 50%; border: 1px solid $main; cursor: pointer; z-index: 2; background-color: $light;
+
+    &.swiper-button-disabled { border-color: $gray;
+      &>.slider-iconprev, &>.slider-iconnext { background-color: $gray; }
+    }
+  }
+  &-prev { left: 25px;
+    &:hover { background-color: $background; }
+    &:active .slider-iconprev { transform: translateX(-50%); }
+  }
+  &-next { right: 25px;
+    &:hover { background-color: $background; }
+    &:active .slider-iconnext { transform: translateX(50%); }
+  }
+  &-iconprev, &-iconnext { transition: all 0.15s ease-in; }
+
+  & .swiper-pagination-bullet-active { background-color: $main !important; }
+  & .swiper-pagination-bullet { background-color: $white; border: 1px solid $main; }
+}

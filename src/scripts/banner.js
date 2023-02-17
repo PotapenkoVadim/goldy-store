@@ -2,8 +2,8 @@ import Swiper from 'swiper';
 
 const bannerSelectors = {
   slider: '#bannerSlider',
-  prevButton: '#bannerSlider .banner__slider-prev',
-  nextButton: '#bannerSlider .banner__slider-next',
+  prevButton: '#bannerSlider .slider-prev',
+  nextButton: '#bannerSlider .slider-next',
   pagination: '#bannerSlider .swiper-pagination',
 };
 

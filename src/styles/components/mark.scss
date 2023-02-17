@@ -1,0 +1,6 @@
+@import '../variables.scss';
+
+.mark { font-size: 0.8rem; padding: 0 12px; border-radius: 15px;
+  &_accent { background-color: $accent; color: $white; }
+  &_blue { background-color: $blue; color: $white; }
+}
