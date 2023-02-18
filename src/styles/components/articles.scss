@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.articles { margin-bottom: 80px;
+  &__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  &__link { display: flex; align-items: center; gap: 12px; font-size: 0.87rem; cursor: pointer;
+    &:hover { opacity: 0.5; }
+  }
+
+  &__list { display: flex; align-items: center; justify-content: space-between; }
+  &__date { font-weight: 400; font-size: 0.87rem; margin: 20px 0 10px; color: #8F8F8F; }
+  &__item { cursor: pointer; }
+}
