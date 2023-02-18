@@ -38,10 +38,10 @@
   }
 
   &__question { cursor: pointer; }
-  &__sizes { margin-bottom: 40px; }
+  &__sizes { margin-bottom: 35px; }
   &__size { position: relative;
     &-control { display: block; padding: 10px; border: 1px solid $middle-alto; font-weight: 400; font-size: 0.87rem; cursor: pointer;
-      min-width: 50px; text-align: center;
+      min-width: 50px; text-align: center; margin-bottom: 5px;
       &:hover { border-color: $main; }
     }
 
@@ -65,4 +65,16 @@
   &__button-prev, &__button-next { position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 99; }
   &__button-next { right: 70px; left: auto; }
   &__marks { position: absolute; top: 10px; left: 16px; @include align-center; gap: 4px; }
+
+  @media (max-width: $tablet) { margin-bottom: 60px;
+    &__slider-button { display: none; }
+    &__slide { flex-direction: column; gap: 0; }
+    &__data { padding: 0 10px; }
+  }
+
+  @media (max-width: $mobile) {
+    &__info { flex-direction: column; align-items: flex-start; gap: 10px; }
+    &__timer { justify-content: center; }
+    &__actions { flex-direction: column; gap: 15px; }
+  }
 }

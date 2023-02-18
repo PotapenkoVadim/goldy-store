@@ -6,7 +6,11 @@
     &:hover { opacity: 0.5; }
   }
 
-  &__list { display: flex; gap: 10px; justify-content: space-between; }
+  &__list { display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap; }
   &__date { font-weight: 400; font-size: 0.87rem; margin: 20px 0 10px; color: $main; }
-  &__item { cursor: pointer; }
+  &__item { cursor: pointer; flex: 1; max-width: 310px; }
+
+  @media (max-width: $mobile) {
+    &__list { justify-content: center; gap: 20px; }
+  }
 }

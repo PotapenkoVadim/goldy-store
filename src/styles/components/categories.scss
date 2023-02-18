@@ -2,7 +2,7 @@
 
 .categories { margin-bottom: 115px;
   &__title { margin-bottom: 40px; }
-  &__list { @include space-between; gap: 20px; }
+  &__list { @include space-between; gap: 18px; flex-wrap: wrap; }
   &__item { background-color: $light; min-height: 260px; min-width: 200px; padding: 0 15px; flex-direction: column;
     cursor: pointer; gap: 30px; @include center;
 
@@ -11,5 +11,11 @@
     &-image { transition: all 0.35s ease-in; }
 
     &:hover .categories__item-image { transform: scale(1.2); }
+  }
+
+  @media (max-width: $mobile) { margin-bottom: 60px;
+    &__title { margin-bottom: 15px; }
+    &__list { justify-content: center; }
+    &__item { width: 100%; min-width: 100%; }
   }
 }

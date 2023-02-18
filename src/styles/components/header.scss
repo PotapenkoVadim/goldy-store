@@ -15,4 +15,17 @@
   &__down { background-color: $light; @include align-center; gap: 110px; }
   &__navbar { flex: 4; padding: 20px 0 20px 50px; }
   &__search { flex: 1; }
+
+  @media (max-width: $tablet) {
+    &__meta { display: none; }
+    &__navbar { display: none; }
+    &__actions { gap: 15px; }
+  }
+
+  @media (max-width: $mobile) {
+    &__doing { display: none; }
+    &__login { flex-direction: column; gap: 0;
+      &-link:first-child::after { display: none; }
+    }
+  }
 }

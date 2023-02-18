@@ -2,7 +2,7 @@
 
 .banner { margin-bottom: 115px;
   &__slider { height: 550px; }
-  &__slide { @include align-center; background-color: $light;
+  &__slide { @include align-center; background-color: $light; overflow: hidden;
     &-info, &-poster { flex: 1; }
     &-info { height: 100%; background-image: url(../static/images/union.png); background-size: contain; background-position: center;
       background-repeat: no-repeat; display: flex; justify-content: center; flex-direction: column; padding-left: 125px;
@@ -14,4 +14,23 @@
 
   & .swiper-pagination-bullet-active { background-color: $main !important; }
   & .swiper-pagination-bullet { background-color: $white; border: 1px solid $main; }
+
+  @media (max-width: $tablet) {
+    &__slide { position: relative;
+      &-info { @include absolute-center; background-image: none; padding-left: 0; width: 100%;
+        background: rgba(#F0F0F0, 0.5); align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) { margin-bottom: 60px;
+    &__slide {
+      &-text { font-size: 1.85rem; font-weight: bold; margin-bottom: 50px; }
+      &-title { font-size: 1rem; margin-bottom: 10px; }
+    }
+
+    & .slider-button { padding: 8px; }
+    & .slider-prev { left: 3px; }
+    & .slider-next { right: 3px; }
+  }
 }
