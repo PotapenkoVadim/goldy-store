@@ -1,6 +1,6 @@
 @import '../variables.scss';
 
-.search-field { position: relative; border-left: 1px solid #F0F0F0; padding-left: 55px; height: 100%;
-  &__input { border: none; outline: none; background-color: transparent; font-size: 0.87rem; padding: 20px 0; }
+.search-field { position: relative; border-left: 1px solid $gallery; padding-left: 55px; height: 100%;
+  &__input { @include reset-border; background-color: transparent; font-size: 0.87rem; padding: 20px 0; }
   &__icon { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); }
 }

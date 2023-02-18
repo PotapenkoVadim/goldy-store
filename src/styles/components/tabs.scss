@@ -1,14 +1,11 @@
 @import '../variables.scss';
 
 .tabs { overflow: hidden;
-  &__link { border-radius: 21px; background-color: #F0F0F0; font-size: 0.87rem; padding: 10px 30px;
-    border: none; outline: none; margin-right: 5px;
-
-    &:hover { background-color: #DDDDDD; }
+  &__content { animation: fadeEffect 1s; }
+  &__link { border-radius: 21px; background-color: $gallery; font-size: 0.87rem; padding: 10px 30px; @include reset-border; margin-right: 5px;
+    &:hover { background-color: $easy-alto; }
     &:active, &_active { background-color: $main; color: $white; }
   }
-
-  &__content { animation: fadeEffect 1s; }
 }
 
 @keyframes fadeEffect {

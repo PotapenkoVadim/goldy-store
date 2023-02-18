@@ -5,33 +5,25 @@
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
 @import './variables.scss';
+@import './mixins.scss';
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Inter', sans-serif; font-size: $font; }
 
 @import './components';
 
-.tooltip-inner {
-  font-size: 0.87rem;
-  background-color: $white;
-  color: $main;
-  text-align: left;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-  opacity: 1 !important;
+.tooltip-inner { font-size: 0.87rem; background-color: $white; color: $main; text-align: left;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); opacity: 1 !important;
 }
 .tooltip.bs-tooltip-right .tooltip-arrow::before {
-  border-right-color: $white !important;
-  opacity: 1 !important;
+  border-right-color: $white !important; opacity: 1 !important;
 }
 .tooltip.bs-tooltip-left .tooltip-arrow::before {
-  border-left-color: $white !important;
-  opacity: 1 !important;
+  border-left-color: $white !important; opacity: 1 !important;
 }
 .tooltip.bs-tooltip-bottom .tooltip-arrow::before {
-  border-bottom-color: $white !important;
-  opacity: 1 !important;
+  border-bottom-color: $white !important; opacity: 1 !important;
 }
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
-  border-top-color: $white !important;
-  opacity: 1 !important;
+  border-top-color: $white !important; opacity: 1 !important;
 }

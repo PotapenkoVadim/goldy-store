@@ -3,6 +3,6 @@
 .mark { font-size: 0.8rem; padding: 2px 10px; border-radius: 15px;
   &_accent { background-color: $accent; color: $white; }
   &_blue { background-color: $blue; color: $white; }
-  &_dark { background-color: #495159; color: $white; }
-  &_orange { background-color: #E1A661; color: $white; }
+  &_dark { background-color: $trout; color: $white; }
+  &_orange { background-color: $peach; color: $white; }
 }

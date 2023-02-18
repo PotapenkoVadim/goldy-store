@@ -1,5 +1,5 @@
 @import '../variables.scss';
 
-.logo { display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer;
+.logo { @include center; flex-direction: column; cursor: pointer;
   &__description { color: $gray; font-size: 0.87rem; }
 }

@@ -1,17 +1,17 @@
 @import '../variables.scss';
 
-.benefits { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 115px;
-  &__item { flex: 1; display: flex; align-items: center; justify-content: space-between; position: relative;
-    min-height: 290px; background-color: #F8F8F8; background-image: url(../static/images/union-small.png);
+.benefits { @include space-between; gap: 20px; margin-bottom: 115px;
+  &__item { flex: 1; @include space-between; position: relative;
+    min-height: 290px; background-color: $light; background-image: url(../static/images/union-small.png);
     background-position: left bottom; background-repeat: no-repeat;
   }
 
   &__title { padding: 0 0 25px 25px; font-size: 1.15rem; font-weight: 600; text-transform: uppercase; }
-  &__label { font-size: 1.5rem; color: $white; padding: 0 20px; max-width: 190px; display: flex; align-items: center;
+  &__label { font-size: 1.5rem; color: $white; padding: 0 20px; max-width: 190px; @include align-center;
     position: absolute; bottom: 40px; left: 0;
-    &_blue { background-color: #43807F; }
-    &_red { background-color: #E24B33; }
-    &_orange { background-color: #E1A661; }
+    &_blue { background-color: $dark-blue; }
+    &_red { background-color: $coral; }
+    &_orange { background-color: $peach; }
   }
   &__discount { font-size: 2.25rem; }
 }

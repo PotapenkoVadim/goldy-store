@@ -2,41 +2,35 @@
 
 .product { position: relative; margin-bottom: 115px;
   &__title { margin-bottom: 40px; }
-  &__slider-button { position: absolute; top: -5px !important; right: 0 !important; left: auto !important; transform: none;
-    z-index: 5;
+  &__slider-button { position: absolute; top: -5px !important; right: 0 !important; left: auto !important; transform: none; z-index: 5;
     &-prev { right: 65px !important; }
   }
 
-  &__slide { display: flex; align-items: center; gap: 35px; }
+  &__slide { @include align-center; gap: 35px; }
   &__poster, &__data { flex: 1; }
   &__data { align-self: stretch; }
-  &__rating { display: flex; align-items: center; gap: 5px; font-size: 0.87rem; }
-  &__name { font-size: 2rem; margin: 20px 0; font-family: 'Prata', serif; }
-  &__attr { color: #8F8F8F; font-size: 0.87rem; }
-  &__info { display: flex; align-items: center; gap: 40px; border-bottom: 1px solid #f0f0f0; padding-bottom: 20px; }
-  &__timer { background-color: #F5F5F5; padding: 12px 14px; display: flex; align-items: center; gap: 10px; }
-  &__timer-value { padding: 3px 10px; border: 1px solid #D0D0D0; background-color: $white; display: flex; align-items: center; justify-content: center;
-    flex-direction: column;
-  }
+  &__rating { @include align-center; gap: 5px; font-size: 0.87rem; }
+  &__name { font-size: 2rem; margin: 20px 0; @include prata-font; }
+  &__attr { color: $light-gray; font-size: 0.87rem; }
+  &__info { @include align-center; gap: 40px; border-bottom: 1px solid $gallery; padding-bottom: 20px; }
+  &__timer { background-color: $background; padding: 12px 14px; @include align-center; gap: 10px; }
+  &__timer-value { padding: 3px 10px; border: 1px solid $alto; background-color: $white; @include center; flex-direction: column; }
   &__timer-number { font-weight: 700; }
   &__timer-text { font-size: 0.68rem; font-weight: 300; }
   &__price-current { font-weight: 600; font-size: 1.25rem; }
-  &__price-old { color: #8F8F8F; text-decoration: line-through; padding: 0 12px; }
-  &__subtitle {text-transform: uppercase; font-size: 0.75rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+  &__price-old { @include old-price; padding: 0 12px; }
+  &__subtitle {text-transform: uppercase; font-size: 0.75rem; font-weight: 600; margin-bottom: 15px; @include align-center; gap: 8px; }
   &__colors { margin: 30px 0;
-    &-list { display: flex; align-items: center; gap: 16px; }
+    &-list { @include align-center; gap: 16px; }
   }
   &__checkbox { visibility: none; width: 0; height: 0; position: absolute; }
   &__color { position: relative;
     &-control { display: block; position: relative; border-radius: 50%; width: 24px; height: 24px; cursor: pointer;
-      &:after { content: ''; border-radius: 50%; width: 32px; height: 32px; border: 1px solid #DADADA; position: absolute; top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      &_blue { background-color: #D9D9D9; }
-      &_pink { background-color: #F1CB7E; }
-      &_brown { background-color: #EA8C48; }
-      &_sea { background-color: #A7E492; }
+      &:after { content: ''; border-radius: 50%; width: 32px; height: 32px; border: 1px solid $middle-alto; @include absolute-center; }
+      &_blue { background-color: $light-alto; }
+      &_pink { background-color: $sand; }
+      &_brown { background-color: $jaffa; }
+      &_sea { background-color: $apple; }
     }
 
     .product__checkbox:checked ~ &-control:after { border-color: $main; }
@@ -44,35 +38,31 @@
   }
 
   &__question { cursor: pointer; }
-
   &__sizes { margin-bottom: 40px; }
   &__size { position: relative;
-    &-control { display: block; padding: 10px; border: 1px solid #DADADA; font-weight: 400; font-size: 0.87rem; cursor: pointer;
+    &-control { display: block; padding: 10px; border: 1px solid $middle-alto; font-weight: 400; font-size: 0.87rem; cursor: pointer;
       min-width: 50px; text-align: center;
-      
       &:hover { border-color: $main; }
     }
 
-    .product__checkbox:checked ~ &-control { background-color: $main; color: $white; }
+    .product__checkbox:checked ~ &-control { background-color: $main; color: $white; border: 1px solid $main; }
     .product__checkbox:disabled ~ &-control { cursor: default; opacity: 0.5; }
-    .product__checkbox:disabled ~ &-control:hover { border-color: #DADADA; }
+    .product__checkbox:disabled ~ &-control:hover { border-color: $middle-alto; }
   }
 
   &__actions { display: flex; gap: 40px; }
   &__icons { flex: 1; }
   &__buttons { flex: 2; display: flex; flex-direction: column; gap: 10px; }
   &__button { text-transform: uppercase; }
-  &__button-icon { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; font-size: 0.87rem; cursor: pointer;
-    &:hover { color: #979797; }
-    &:hover .product__icon { background-color: #979797; }
-
+  &__button-icon { @include align-center; gap: 10px; margin-bottom: 15px; font-size: 0.87rem; cursor: pointer;
+    &:hover { color: $dusty-gray; }
+    &:hover .product__icon { background-color: $dusty-gray; }
     &:active { color: $main; }
-    &:active .product__icon { background-color: #E24B33; }
+    &:active .product__icon { background-color: $coral; }
   }
-  &__icon {background-color: #C9C9C9; }
-
+  &__icon {background-color: $silver; }
   &__slide { position: relative; }
   &__button-prev, &__button-next { position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 99; }
   &__button-next { right: 70px; left: auto; }
-  &__marks { position: absolute; top: 10px; left: 16px; display: flex; align-items: center; gap: 4px; }
+  &__marks { position: absolute; top: 10px; left: 16px; @include align-center; gap: 4px; }
 }

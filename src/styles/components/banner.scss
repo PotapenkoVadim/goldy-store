@@ -2,14 +2,14 @@
 
 .banner { margin-bottom: 115px;
   &__slider { height: 550px; }
-  &__slide { display: flex; align-items: center; background-color: $light;
+  &__slide { @include align-center; background-color: $light;
     &-info, &-poster { flex: 1; }
     &-info { height: 100%; background-image: url(../static/images/union.png); background-size: contain; background-position: center;
       background-repeat: no-repeat; display: flex; justify-content: center; flex-direction: column; padding-left: 125px;
     }
     &-image { object-fit: contain; }
-    &-title { font-size: 1.25rem; font-family: 'Prata', serif; margin-bottom: 30px; }
-    &-text { font-size: 3rem; font-family: 'Prata', serif; margin-bottom: 30px; }
+    &-title { font-size: 1.25rem; @include prata-font; margin-bottom: 30px; }
+    &-text { font-size: 3rem; @include prata-font; margin-bottom: 30px; }
   }
 
   & .swiper-pagination-bullet-active { background-color: $main !important; }

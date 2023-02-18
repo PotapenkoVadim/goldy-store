@@ -23,6 +23,6 @@
   &__right { mask-image: url(../static/icons/right.svg); width: 10px; height: 10px; }
   &__right-arrow { mask-image: url(../static/icons/right-arrow.svg); width: 26px; height: 10px; }
 
-  &_gray { background-color: #C9C9C9; }
-  &_gold { background-color: #E1A661; }
+  &_gray { background-color: $silver; }
+  &_gold { background-color: $peach; }
 }

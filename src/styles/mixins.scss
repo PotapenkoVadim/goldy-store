@@ -1,0 +1,35 @@
+@mixin align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center {
+  @include align-center;
+  justify-content: center;
+}
+
+@mixin space-between {
+  @include align-center;
+  justify-content: space-between;
+}
+
+@mixin reset-border {
+  border: none;
+  outline: none;
+}
+
+@mixin old-price {
+  color: $light-gray;
+  text-decoration: line-through;
+}
+
+@mixin prata-font {
+  font-family: 'Prata', serif;
+}

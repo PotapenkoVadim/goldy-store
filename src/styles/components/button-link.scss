@@ -1,10 +1,8 @@
 @import '../variables.scss';
 
-.button-link { border: none; outline: none; background-color: transparent; cursor: pointer;
-  position: relative; padding: 8px;
-
+.button-link { @include reset-border; background-color: transparent; cursor: pointer; position: relative; padding: 8px;
   &__marker { position: absolute; width: 19px; height: 19px; top: 3%; right: -13%; padding: 1px; border-radius: 50%; background-color: $accent;
-    font-size: 0.6rem; font-weight: 700; display: flex; align-items: center; justify-content: center; color: $white;
+    font-size: 0.6rem; font-weight: 700; color: $white; @include center;
     &::after { content: attr(data-value); }
   }
 

@@ -15,12 +15,4 @@ export function initProductOfDaySlider() {
       prevEl: productSliderSelectors.prevButton,
     },
   });
-
-  new Swiper(productSliderSelectors.sliders, {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: '.product__button-next',
-      prevEl: '.product__button-prev',
-    },
-  });
 }
